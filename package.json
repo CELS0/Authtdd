@@ -4,13 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore __tests__",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "description": "",
   "devDependencies": {
     "express": "^4.17.1",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
     "sequelize": "^6.6.5",
     "sequelize-cli": "^6.2.0"
   },
