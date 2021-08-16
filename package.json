@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js --ignore __tests__",
-    "test": "jest"
+    "pretest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest",
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
   },
   "keywords": [],
   "author": "",
@@ -16,9 +18,11 @@
     "jest": "^27.0.6",
     "nodemon": "^2.0.12",
     "sequelize": "^6.6.5",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "sqlite3": "^5.0.2"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "pg": "^8.7.1"
   }
 }
