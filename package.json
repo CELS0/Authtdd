@@ -19,10 +19,15 @@
     "nodemon": "^2.0.12",
     "sequelize": "^6.6.5",
     "sequelize-cli": "^6.2.0",
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.1.5"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
+    "factory-girl": "^5.0.4",
+    "faker": "^5.5.3",
+    "jsonwebtoken": "^8.5.1",
     "pg": "^8.7.1"
   }
 }
