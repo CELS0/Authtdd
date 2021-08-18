@@ -22,18 +22,20 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      created_at: {
+      createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
+        default: new Date(),
       },
-      updated_at: {
+      updatedAt: {
         type: Sequelize.DATE,
         allowNull: false,
-      }
+        default: new Date(),
+      },
     });
   },
 
   down: (queryInterface, Sequelize) => {
-      return queryInterface.dropTable('users');
+    return queryInterface.dropTable('users');
   }
 };
